@@ -73,3 +73,14 @@ catch(ex){
 }
 ```
 
+当catch语句执行完毕以后作用域才会回到原来的状态。由此可见try-cathc是一把双刃剑，得得当的使用，如果程序中的错误是可预见的，那么就在代码中去修复，而不要依赖catch去捕获。或者把错误的处理交给一个函数，这样可以尽可能的减少catch带来的影响.
+```
+try{
+}
+catch(ex){
+  handError(ex)//自定义方法
+}
+function handError(obj){
+  //dosomething
+}
+```
