@@ -17,7 +17,7 @@ js代码打包,因为每下载一个js文件都是一个独立的Http请求,而h
 在没有优化的浏览器中,最好尽可能的使用局部变量.因为变量的查找是一层层的网上找的，知道顶级作用域即全局作用域，而这一次次的查找是需要消耗资源的.所以一个好的经验则是:用局部变量存储本地范围以外的值，特别是要多次使用的情况可以考虑使用以下几种写法:
 ```
 function initUI(){
-  var db=document,
+  var db=document.body,
   links=document.getElementByTagName('a'),
   i=0,
   len=lenks.length,
@@ -25,6 +25,23 @@ function initUI(){
     update(links[i++])
   },
   documentgetElementById("aaa").onclick(){
+    start();
+  };
+  bd.className="active";
+}
+```
+以上代码3次用到了document对象，所以可以优化下:
+```
+function initUI(){
+  var doc=document;//把document对象 放到局部变量doc中
+  var db=doc.body;
+  links=doc.getElementByTagName('a'),
+  i=0,
+  len=lenks.length,
+  while(i<len){
+    update(links[i++])
+  },
+  doc.getElementById("aaa").onclick(){
     start();
   };
   bd.className="active";
