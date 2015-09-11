@@ -15,7 +15,7 @@ js代码打包,因为每下载一个js文件都是一个独立的Http请求,而h
 #第二章,数据存储
 ###一.
 在没有优化的浏览器中,最好尽可能的使用局部变量.因为变量的查找是一层层的网上找的，知道顶级作用域即全局作用域，而这一次次的查找是需要消耗资源的.所以一个好的经验则是:用局部变量存储本地范围以外的值，特别是要多次使用使用的情况:
-``
+```
 function initUI(){
   var db=document,
   links=document.getElementByTagName('a'),
@@ -29,4 +29,4 @@ function initUI(){
   };
   bd.className="active";
 }
-``
+```
