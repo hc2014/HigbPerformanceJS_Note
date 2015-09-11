@@ -47,3 +47,18 @@ function initUI(){
   bd.className="active";
 }
 ```
+##二.
+一般来说运行时的上下文作用域不会被改变，但是有两个表达式例外。
+####with语句
+with语句可以用来避免重复的书写,
+```
+function initUI(){
+  with(document){
+  var links=getElementByTagName("a")//这里直接用方法了
+  getElemetnById("aaa").onclick=function(){
+    ...
+  }
+  }
+}
+```
+这样写貌似更简洁了，但是实际上代价更大，因为执行到with语句的时候，会创建一个新新的临时新的，这个
