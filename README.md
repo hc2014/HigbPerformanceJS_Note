@@ -33,7 +33,7 @@ function initUI(){
 以上代码3次用到了document对象，所以可以优化下:
 ```
 function initUI(){
-  *var doc=document;*//把document对象 放到局部变量doc中
+  var doc=document;//把document对象 放到局部变量doc中
   var db=doc.body;
   links=doc.getElementByTagName('a'),
   i=0,
