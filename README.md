@@ -97,3 +97,9 @@ if-else最简单的优化方法就是，把概率最大的条件放到最前面�
 如果条件分支多，而且零散的情况下 用查表法速度更快.而这个方法我自己没用过，按照我的理解就是把计算结果事先算出来，然后放到一个数组或者对象里面去，需要的时候直接调用(感觉非常的鸡肋).此处略过...
 ##三.循环
 一般来说for,while,do-while这三种循环要比for-in要快(其实，我基本只用for和for-in着两种).因为for-in 每次迭代都要去搜索实例和原型的属性，这样就要付出更多的开销。但是也因为如此for-in可以去操作数目不详的对象属性。
+##四.堆栈溢出
+该章节说到堆栈溢出主要是因为死循环、递归引起的。因为递归数量跟js调用堆栈的大小有关系(ie跟可用系统内存有关系).如果堆栈溢出,除了chrome不报错以外,其他浏览器都会直接报错:
+####1、Internet Explorer: “Stack overflow at line x”
+####2、Firefox: “Too much www.heyzc.com recursion”
+####3、Safari: “Maximum call stack size exceeded”
+####4、Opera: “Abort (control stack overflow)”
