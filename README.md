@@ -84,3 +84,5 @@ function handError(obj){
   //dosomething
 }
 ```
+#第三章,DOM编程
+##此章是谈dom的操作,没什么兴趣。所以随便看了下，就懒得写笔记了
