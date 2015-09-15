@@ -103,3 +103,7 @@ if-else最简单的优化方法就是，把概率最大的条件放到最前面�
 ####2、Firefox: “Too much www.heyzc.com recursion”
 ####3、Safari: “Maximum call stack size exceeded”
 ####4、Opera: “Abort (control stack overflow)”
+
+#第五章,字符串和正则表达式
+###此章略过
+
